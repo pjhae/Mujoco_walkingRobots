@@ -31,7 +31,8 @@ you can see the code for specific MDP setting(S,A,R..) info
 ### 2. Hexapod
 
 #### [Solidworks] re-assembly : 
-![hexy_SW3](https://user-images.githubusercontent.com/74540268/169761917-f23cc110-e619-42ed-a4e6-60f8bd2c7018.PNG)
+![hexy_SW5](https://user-images.githubusercontent.com/74540268/169771628-68467884-ec69-4360-9d6f-18734fe37e66.PNG)
+
 
 
 #### [URDF] Hitbox design : 
