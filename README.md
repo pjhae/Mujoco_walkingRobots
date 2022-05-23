@@ -10,7 +10,7 @@ https://grabcad.com/library
 
 ### 1. MiniCheetah
 
-[Solidworks] re-assembly process: https://youtu.be/irAciVODtpI
+#### [Solidworks] re-assembly process: https://youtu.be/irAciVODtpI
 
 
 [URDF] Hitbox design : using basic shape (Box, cylinder, sphere..)
