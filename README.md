@@ -29,7 +29,6 @@ you can see the code for specific MDP setting(S,A,R..) info
 ### 2. Hexapod
 
 #### 2.1. [Solidworks] re-assembly : 
-![hexy_SW5](https://user-images.githubusercontent.com/74540268/169771628-68467884-ec69-4360-9d6f-18734fe37e66.PNG)
 ![hexy_SW6](https://user-images.githubusercontent.com/74540268/169776703-d9660b52-a81e-4ba5-ab9a-c01d76072a12.PNG)
 
 
