@@ -24,9 +24,8 @@ https://grabcad.com/library
 ### 2. Hexapod
 
 [Solidworks] re-assembly : https://youtu.be/irAciVODtpI
+![hexy_SW3](https://user-images.githubusercontent.com/74540268/169761917-f23cc110-e619-42ed-a4e6-60f8bd2c7018.PNG)
 
-![hexy_SW](https://user-images.githubusercontent.com/74540268/169761740-4c1f082b-c1fb-4ccc-acc6-98bddd66ea0a.PNG)
-![hexy_SW2](https://user-images.githubusercontent.com/74540268/169761744-49774f99-a1c6-4ca9-9e2b-cbb2f8b27e07.PNG)
 
 
 [URDF] Hitbox design : 
