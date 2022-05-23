@@ -23,10 +23,10 @@ https://youtu.be/irAciVODtpI
 you can see the code for specific MDP setting(S,A,R..) info
 
  
- 
- 
- 
- 
+ .
+ .
+ .
+ .
 
 ### 2. Hexapod
 
