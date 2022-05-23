@@ -13,7 +13,7 @@ https://grabcad.com/library
 [Solidworks] re-assembly : https://youtu.be/irAciVODtpI
 
 
-[URDF] Hitbox design : 
+[URDF] Hitbox design : using basic shape (Box, cylinder, sphere..)
 ![Hitbox](https://user-images.githubusercontent.com/74540268/169758719-4ecca46f-24fb-4cca-b3a1-0682afbeb4c0.PNG)
 
 
