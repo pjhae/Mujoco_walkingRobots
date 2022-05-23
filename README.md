@@ -19,11 +19,11 @@ https://grabcad.com/library
 
 [MUJOCO,GYM,sb3] Training results : you can see the code for specific MDP setting(S,A,R..) info
 
-
-
-
-
-
+ 
+ 
+ 
+ 
+ 
 
 ### 2. Hexapod
 
