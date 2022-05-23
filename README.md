@@ -8,7 +8,20 @@ URDF : All links and joints are manually reverse engineered from assembly file f
 https://grabcad.com/library
 
 
-1. MiniCheetah
+### 1. MiniCheetah
+
+[Solidworks] re-assembly : https://youtu.be/irAciVODtpI
+
+
+
+[URDF] Hitbox design : 
+
+
+
+[MUJOCO,GYM,sb3] Training results : 
+
+
+### 2. Hexapod
 
 [Solidworks] re-assembly : https://youtu.be/irAciVODtpI
 
