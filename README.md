@@ -44,7 +44,7 @@ you can see the code for specific MDP setting(S,A,R..) info
 
 #### 2.3. [MUJOCO,GYM,sb3] Training results : 
 you can see the code for specific MDP setting(S,A,R..) info
-   ![hexy](https://user-images.githubusercontent.com/74540268/169943892-e235b3e9-8a02-46d0-a128-d9366a4c8f75.gif)
+   ![hexy2](https://user-images.githubusercontent.com/74540268/169965058-dae06b5d-aa1c-476b-943a-8457845638db.gif)
 
 
 
