@@ -21,7 +21,7 @@ https://youtu.be/irAciVODtpI
 
 #### 1.3. [MUJOCO,GYM,sb3] Training results :
 you can see the code for specific MDP setting(S,A,R..) info
-![ezgif com-gif-maker (2)](https://user-images.githubusercontent.com/74540268/169942942-3707bade-7b80-4f47-9559-2bb95be579ff.gif)
+![ezgif com-gif-maker (3)](https://user-images.githubusercontent.com/74540268/169943039-2b11c7df-4b8c-42a2-886f-bb0ed8ed8681.gif)
 
  
 ## 
