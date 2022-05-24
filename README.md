@@ -6,7 +6,7 @@ https://grabcad.com/library
 ### 0. Requirements : 
 Installation : GYM, MUJOCO, stablebaselines3 + (Linux)
 
-PATH : 
+PATH : ~/python3.8/site-packages/gym/envs/
 
 
 ## 
