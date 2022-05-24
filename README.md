@@ -2,7 +2,8 @@
 
 ## Simple walking implementation using RL
 
-### 0. Requirements : GYM, MUJOCO, stablebaselines3 + (Linux)
+### 0. Requirements : 
+Installation : GYM, MUJOCO, stablebaselines3 + (Linux)
 
 PATH : 
 
