@@ -37,7 +37,8 @@ you can see the code for specific MDP setting(S,A,R..) info
 
 
 #### 2.2. [URDF] Hitbox design : 
-![hexy_heat](https://user-images.githubusercontent.com/74540268/169944536-5b32a56a-169b-4e2a-896f-c0564ffbb447.PNG)
+![hexy_heat2](https://user-images.githubusercontent.com/74540268/169944721-46a89900-eaed-4b17-b6cb-a4496fd48ab6.PNG)
+
 
 
 
