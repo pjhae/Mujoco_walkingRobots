@@ -2,7 +2,9 @@
 
 ## Simple walking implementation using RL
 
-Requirements : GYM, MUJOCO, stablebaselines3 + (Linux)
+### 0. Requirements : GYM, MUJOCO, stablebaselines3 + (Linux)
+
+PATH : 
 
 URDF : All links and joints are manually reverse engineered from assembly file from GRABCAD
 https://grabcad.com/library
