@@ -1,0 +1,152 @@
+<mujocoinclude>
+    <body childclass="hexy" name="Hexy" pos="0 0 0.06" euler="-1.570796 0 -1.570796">
+        <!-- Torso 0.29131 gram -->
+        <geom class="belly" name="Torso" mesh="Bulk"/>
+        <geom class="collision" type="mesh" mesh="BulkCollision" euler="1.570796 1.570796 0"/>
+        <inertial pos="0.038378 0.011283 -2.4509e-05" quat="1 -0.000159067 -3.52117e-06 -8.80146e-05" mass="0.39131" diaginertia="0.00058735 0.00035464 0.00024547" />
+        <!-- Front Right Leg -->
+        <body name="FrontRightThigh" pos="0.0133 0.076604 -0.064279" quat="0.67 -0.23 0.67 -0.23">
+            <inertial pos="0.000650729 0.00390237 0.0206345" quat="0.565059 0.407617 0.353554 0.624144" mass="0.0328104" diaginertia="4.10825e-06 4.04383e-06 3.93464e-06" />
+            <joint name="FR1" pos="0 0 0" axis="0 0 1"/>
+            <geom class="thigh"/>
+            <geom class="collision" type="box" pos="0.023 0 0.02" size="0.003 0.012 0.018"/>
+            <geom class="collision" type="box" pos="-0.023 0.009 0.02" size="0.003 0.021 0.018"/>
+            <body name="FrontRightShin" pos="0 0.026 0.02015" quat="0.4 1 0.4 1">
+                <inertial pos="7.00279e-05 -0.0244376 -0.00118476" quat="0.707108 0.707106 0 0" mass="0.0331424" diaginertia="6.21248e-06 5.7647e-06 2.30821e-06" />
+                <joint name="FR2" class="shin" pos="0 0 0" axis="0 0 1"/>
+                <geom class="shin"/>
+                <geom class="collision" type="box" pos="0 -0.0245 0" size="0.012 0.0345 0.014"/>
+                <body name="FrontRightFoot" pos="0 -0.04887 0" quat="0.5 -0.5 1 -1">
+                    <inertial pos="0.0170134 0.00029768 1.52199e-09" quat="3.18245e-06 0.707107 -3.68379e-07 0.707106" mass="0.0165654" diaginertia="1.76103e-06 1.37282e-06 1.01637e-06" />
+                    <joint name="FR3" class="foot" pos="0 0 0" axis="0 1 0"/>
+                    <geom class="foot"/>
+                    <geom class="collision" type="box" pos="0.013 0.023 0" size="0.018 0.0033 0.005"/>
+                    <geom class="collision" type="box" pos="0.013 -0.023 0" size="0.018 0.0033 0.005"/>
+                    <geom class="collision" type="box" pos="0 0.023 0" size="0.005 0.0033 0.017"/>
+                    <geom class="collision" euler="0 -1.571 0" type="capsule" pos="0.038 0 0" size="0.005 0.01"/>
+                    <site name="FRfoot" rgba="1 0.3 0.3 1"/>
+                </body>
+            </body>
+        </body>
+        <!-- Middle Right Leg -->
+        <body name="MiddleRightThigh" pos="0.0133 0 -0.1" quat="0.5 -0.5 0.5 -0.5">
+            <inertial pos="0.000650726 0.00390238 0.0206345" quat="0.565059 0.407618 0.353555 0.624142" mass="0.0328105" diaginertia="4.10825e-06 4.04383e-06 3.93464e-06" />
+            <joint name="MR1" pos="0 0 0" axis="0 0 1"/>
+            <geom class="thigh"/>
+            <geom class="collision" type="box" pos="0.023 0 0.02" size="0.003 0.012 0.018"/>
+            <geom class="collision" type="box" pos="-0.023 0.009 0.02" size="0.003 0.021 0.018"/>
+            <body name="MiddleRightShin" pos="0 0.026 0.02015" quat="0.4 1 0.4 1">
+                <inertial pos="6.99965e-05 -0.0244375 -0.00118476" quat="0.707107 0.707107 -8.09775e-06 8.09775e-06" mass="0.0331424" diaginertia="6.21247e-06 5.7647e-06 2.30821e-06" />
+                <joint name="MR2" class="shin" pos="0 0 0" axis="0 0 1"/>
+                <geom class="shin"/>
+                <geom class="collision" type="box" pos="0 -0.0245 0" size="0.012 0.0345 0.014"/>
+                <body name="MiddleRightFoot" pos="0.00014 -0.04887 0" quat="0.5 -0.5 1 -1">
+                    <inertial pos="0.0170134 0.00029772 -2.57158e-08" quat="4.56968e-06 0.707107 1.45044e-07 0.707107" mass="0.0165654" diaginertia="1.76103e-06 1.37282e-06 1.01637e-06" />
+                    <joint name="MR3" class="foot" pos="0 0 0" axis="0 1 0"/>
+                    <geom class="foot"/>
+                    <geom class="collision" type="box" pos="0.013 0.023 0" size="0.018 0.0033 0.005"/>
+                    <geom class="collision" type="box" pos="0.013 -0.023 0" size="0.018 0.0033 0.005"/>
+                    <geom class="collision" type="box" pos="0 0.023 0" size="0.005 0.0033 0.017"/>
+                    <geom class="collision" euler="0 -1.571 0" type="capsule" pos="0.038 0 0" size="0.005 0.01"/>
+                    <site name="MRfoot" rgba="1 1 0.3 1"/>
+                </body>
+            </body>
+        </body>
+        <!-- Back Right Leg -->
+        <body name="BackRightThigh" pos="0.0133 -0.0766044 -0.0642788" quat="0.23 -0.67 0.23 -0.67">
+            <inertial pos="0.000650732 0.00390238 0.0206345" quat="0.56506 0.40762 0.353558 0.62414" mass="0.0328105" diaginertia="4.10825e-06 4.04383e-06 3.93464e-06" />
+            <joint name="BR1" pos="0 0 0" axis="0 0 1"/>
+            <geom class="thigh"/>
+            <geom class="collision" type="box" pos="0.023 0 0.02" size="0.003 0.012 0.018"/>
+            <geom class="collision" type="box" pos="-0.023 0.009 0.02" size="0.003 0.021 0.018"/>
+            <body name="BackRightShin" pos="0 0.026 0.02015" quat="-1 0.4 -1 0.4">
+                <inertial pos="-6.99677e-05 0.0244324 -0.00118475" quat="0.707108 0.707106 0 0" mass="0.0331424" diaginertia="6.21248e-06 5.7647e-06 2.30821e-06" />
+                <joint name="BR2" class="shin" pos="0 0 0" axis="0 0 1"/>
+                <geom class="shin" euler="0 0 -3.141593"/>
+                <geom class="collision" type="box" pos="0 0.0245 0" size="0.012 0.0345 0.014"/>
+                <body name="BackRightFoot" pos="-0.00014 0.04887 0" quat="1 -1 -0.5 0.5">
+                    <inertial pos="0.0170134 0.000297742 -3.74929e-08" quat="5.09579e-06 0.707107 3.37696e-07 0.707106" mass="0.0165654" diaginertia="1.76103e-06 1.37282e-06 1.01637e-06" />
+                    <joint name="BR3" class="foot" pos="0 0 0" axis="0 1 0"/>
+                    <geom class="foot"/>
+                    <geom class="collision" type="box" pos="0.013 0.023 0" size="0.018 0.0033 0.005"/>
+                    <geom class="collision" type="box" pos="0.013 -0.023 0" size="0.018 0.0033 0.005"/>
+                    <geom class="collision" type="box" pos="0 0.023 0" size="0.005 0.0033 0.017"/>
+                    <geom class="collision" euler="0 -1.571 0" type="capsule" pos="0.038 0 0" size="0.005 0.01"/>
+                    <site name="BRfoot" rgba="0.3 1 0.3 1"/>
+                </body>
+            </body>
+        </body>
+        <!-- Front Left Leg -->
+        <body name="FrontLeftThigh" pos="0.0133 0.0766044 0.0642788" quat="0.67 0.23 0.67 0.23">
+            <inertial pos="0.000650732 0.00390238 0.0206345" quat="0.56506 0.40762 0.353558 0.62414" mass="0.0328105" diaginertia="4.10825e-06 4.04383e-06 3.93464e-06" />
+            <joint name="FL1" pos="0 0 0" axis="0 0 1"/>
+            <geom class="thigh"/>
+            <geom class="collision" type="box" pos="0.023 0 0.02" size="0.003 0.012 0.018"/>
+            <geom class="collision" type="box" pos="-0.023 0.009 0.02" size="0.003 0.021 0.018"/>
+            <body name="FrontLeftShin" pos="0 0.026 0.02015" quat="0.4 1 0.4 1">
+                <inertial pos="6.99987e-05 -0.0244375 -0.00118475" quat="0.707107 0.707107 -8.15956e-06 8.15956e-06" mass="0.0331424" diaginertia="6.21248e-06 5.7647e-06 2.30821e-06" />
+                <joint name="FL2" class="shin" pos="0 0 0" axis="0 0 1"/>
+                <geom class="shin"/>
+                <geom class="collision" type="box" pos="0 -0.0245 0" size="0.012 0.0345 0.014"/>
+                <body name="FrontLeftFoot" pos="0.00014 -0.04887 0" quat="0.5 -0.5 1 -1">
+                    <inertial pos="0.017013 0.00029773 -3.1875e-08" quat="4.82555e-06 0.707107 6.15082e-07 0.707106" mass="0.016565" diaginertia="1.761e-06 1.3728e-06 1.0164e-06" />
+                    <joint name="FL3" class="foot" pos="0 0 0" axis="0 1 0"/>
+                    <geom class="foot"/>
+                    <geom class="collision" type="box" pos="0.013 0.023 0" size="0.018 0.0033 0.005"/>
+                    <geom class="collision" type="box" pos="0.013 -0.023 0" size="0.018 0.0033 0.005"/>
+                    <geom class="collision" type="box" pos="0 0.023 0" size="0.005 0.0033 0.017"/>
+                    <geom class="collision" euler="0 -1.571 0" type="capsule" pos="0.038 0 0" size="0.005 0.01"/>
+                    <site name="FLfoot" rgba="0.3 1 1 1"/>
+                </body>
+            </body>
+        </body>
+        <!-- Middle Left Leg -->
+        <body name="MiddleLeftThigh" pos="0.0133 0 0.1" quat="0.5 0.5 0.5 0.5">
+            <inertial pos="0.00065072 0.0039024 0.020635" quat="0.565132 0.407532 0.35351 0.624158" mass="0.03281" diaginertia="4.10826e-06 4.04379e-06 3.93464e-06" />
+            <joint name="ML1" pos="0 0 0" axis="0 0 1"/>
+            <geom class="thigh"/>
+            <geom class="collision" type="box" pos="0.023 0 0.02" size="0.003 0.012 0.018"/>
+            <geom class="collision" type="box" pos="-0.023 0.009 0.02" size="0.003 0.021 0.018"/>
+            <body name="MiddleLeftShin" pos="0 0.026 0.02015" quat="0.4 1 0.4 1">
+                <inertial pos="7.0023e-05 -0.024438 -0.0011848" quat="0.707107 0.707107 0 0" mass="0.033142" diaginertia="6.2125e-06 5.7647e-06 2.3082e-06" />
+                <joint name="ML2" class="shin" pos="0 0 0" axis="0 0 1"/>
+                <geom class="shin"/>
+                <geom class="collision" type="box" pos="0 -0.0245 0" size="0.012 0.0345 0.014"/>
+                <body name="MiddleLeftFoot" pos="0.00014 -0.04887 0" quat="0.5 -0.5 1 -1">
+                    <inertial pos="0.017013 0.00029772 -1.3239e-08" quat="3.94529e-06 0.707107 -1.79691e-07 0.707107" mass="0.016565" diaginertia="1.761e-06 1.3728e-06 1.0164e-06" />
+                    <joint name="ML3" class="foot" pos="0 0 0" axis="0 1 0"/>
+                    <geom class="foot"/>
+                    <geom class="collision" type="box" pos="0.013 0.023 0" size="0.018 0.0033 0.005"/>
+                    <geom class="collision" type="box" pos="0.013 -0.023 0" size="0.018 0.0033 0.005"/>
+                    <geom class="collision" type="box" pos="0 0.023 0" size="0.005 0.0033 0.017"/>
+                    <geom class="collision" euler="0 -1.571 0" type="capsule" pos="0.038 0 0" size="0.005 0.01"/>
+                    <site name="MLfoot" rgba="0.3 0.3 1 1"/>
+                </body>
+            </body>
+        </body>
+        <!-- Back Left Leg -->
+        <body name="BackLeftThigh" pos="0.0133 -0.0766044 0.0642788" quat="0.23 0.67 0.23 0.67">
+            <inertial pos="0.000650729 0.00390237 0.0206345" quat="0.565059 0.407617 0.353554 0.624144" mass="0.0328104" diaginertia="4.10825e-06 4.04383e-06 3.93464e-06" />
+            <joint name="BL1" pos="0 0 0" axis="0 0 1"/>
+            <geom class="thigh"/>
+            <geom class="collision" type="box" pos="0.023 0 0.02" size="0.003 0.012 0.018"/>
+            <geom class="collision" type="box" pos="-0.023 0.009 0.02" size="0.003 0.021 0.018"/>
+            <body name="BackLeftShin" pos="0 0.026 0.02015" quat="0.4 1 0.4 1">
+                <inertial pos="7.00277e-05 -0.0244376 -0.00118476" quat="0.707108 0.707106 0 0" mass="0.0331424" diaginertia="6.21248e-06 5.7647e-06 2.30821e-06" />
+                <joint name="BL2" class="shin" pos="0 0 0" axis="0 0 1"/>
+                <geom class="shin"/>
+                <geom class="collision" type="box" pos="0 -0.0245 0" size="0.012 0.0345 0.014"/>
+                <body name="BackLeftFoot" pos="0.00014 -0.04887 0" quat="0.5 -0.5 1 -1">
+                    <inertial pos="0.0170134 0.000297681 9.41423e-10" quat="3.20918e-06 0.707107 -3.75724e-07 0.707106" mass="0.0165654" diaginertia="1.76103e-06 1.37282e-06 1.01637e-06" />
+                    <joint name="BL3" class="foot" pos="0 0 0" axis="0 1 0"/>
+                    <geom class="foot"/>
+                    <geom class="collision" type="box" pos="0.013 0.023 0" size="0.018 0.0033 0.005"/>
+                    <geom class="collision" type="box" pos="0.013 -0.023 0" size="0.018 0.0033 0.005"/>
+                    <geom class="collision" type="box" pos="0 0.023 0" size="0.005 0.0033 0.017"/>
+                    <geom class="collision" euler="0 -1.571 0" type="capsule" pos="0.038 0 0" size="0.005 0.01"/>
+                    <site name="BLfoot" rgba="1 0.3 1 1"/>
+                </body>
+            </body>
+        </body>
+    </body>
+</mujocoinclude>

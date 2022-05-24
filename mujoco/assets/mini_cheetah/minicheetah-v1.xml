@@ -1,0 +1,17 @@
+<mujoco model="minicheetah-v1">
+    <include file="scenes/scene.xml"/>
+    <include file="assets/dep-v1.xml"/>
+    <compiler meshdir="meshes/"/>
+    <worldbody>
+        <body name="minicheetah_frame" pos="0 0 0">
+            <camera name="track" mode="trackcom" pos="0.25 -1.5 0.35" xyaxes="1 0 0 0 0 1"/>
+            <joint name="Tx" pos="0 0 0" axis="1 0 0" limited="true" type="slide" range="-10 100"/>
+            <joint name="Ty" pos="0 0 0" axis="0 1 0" limited="true" type="slide" range="-10 100"/>
+            <joint name="Tz" pos="0 0 0" axis="0 0 1" limited="true" type="slide" range="-10 100"/>
+            <joint name="Rx" pos="0 0 0" axis="1 0 0" limited="true" range="-20 20"/>
+            <joint name="Ry" pos="0 0 0" axis="0 1 0" limited="true" range="-20 20"/>
+            <joint name="Rz" pos="0 0 0" axis="0 0 1" limited="true" range="-20 100"/>
+            <include file="assets/chain-v1.xml"/>
+        </body>
+    </worldbody>
+</mujoco>

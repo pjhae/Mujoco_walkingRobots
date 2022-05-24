@@ -1,0 +1,121 @@
+<mujocoinclude>
+    <!--
+    <body childclass="minicheetah" name="minicheetah" pos="0 0 0.06" euler="-1.570796 0 -1.570796">
+        < Torso 0.29131 gram >
+        <geom class="belly" name="Torso" mesh="Bulk"/>
+        <geom class="collision" type="mesh" mesh="BulkCollision" euler="-1.570796 0 -1.570796"/>
+        <inertial pos="-0.0174324 0.0448741 5.92739e-05" quat="0.707268 -1.08788e-06 7.95288e-05 0.706945" mass="1.33565" diaginertia="0.00217448 0.00177791 0.00154215" />
+    -->
+    <body childclass="minicheetah" name="minicheetah" pos="0 0 0.26" euler="1.570796 0 0 ">
+        <!-- Torso 0.29131 gram -->
+        <geom class="belly" name="Torso" mesh="Bulk"/>
+        <geom class="collision" type="box"  pos="0.295 0.06 0.053" size = " 0.14 0.045 0.07"  euler="0 0 0" />
+        <geom class="collision" type="cylinder"  pos="0.295 0.06 0.108" size = " 0.045 0.14 "  euler="0 1.570796 0" />
+        <geom class="collision" type="cylinder"  pos="0.295 0.06 -0.0008" size = " 0.045 0.14 "  euler="0 1.570796 0" />
+        <inertial pos="0.289667 0.0594486 0.0535759" quat="0.500058 0.499964 0.5 0.499978" mass="3.65048" diaginertia="0.00789259 0.00726155 0.00371262" />
+
+        <!-- LF -->
+        <body name="LF_waist" pos="0.44 0.061327 0.0035593" quat="-3.67321e-06 1.01715e-10 -2.7691e-05 1">
+            <inertial pos="-0.042748 -1.12577e-06 -0.000690601" quat="0.497604 0.495869 -0.504062 0.50242" mass="0.434303" diaginertia="0.000202976 0.000135183 0.000102482" />
+            <joint name="LF1" class="LF_waist" range="-0.3 0.3" pos="0 0 0" axis="1 0 0" />
+            <geom class="LF_waist"/>
+            <geom class="collision" type="cylinder"  pos = "-0.05 0 0.005"  size = " 0.048 0.018" />
+
+            <body name="LF_thigh" pos="-0.052 0 -0.0112559" quat="6.14843e-09 0 0 -1">
+                <inertial pos="-0.00707782 -0.00730769 -0.0459798" quat="-0.276681 0.636605 0.262517 0.670274" mass="0.714757" diaginertia="0.000560777 0.000376619 0.000258448" />
+                <joint name="LF2" class="LF_thigh" pos="0 0 0" axis="0 0 1" />
+                <geom class="LF_thigh"/>
+                <geom class="collision" type="cylinder"  pos = "-0.00075 0.0005 -0.0355"  size = " 0.048 0.0145" />
+                <geom class="collision" type="cylinder"  pos = "-0.00075 0.0005 -0.0605"  size = " 0.030 0.0145" />
+
+
+                <body name="LF_foot" pos="-0.14953 -0.14957 0" quat="0.999977 0 0 0.00678495">
+                    <inertial pos="0.0711352 -0.0710021 -0.0645764" quat="0.270554 0.6533 -0.270554 0.6533" mass="0.31588" diaginertia="0.000379995 0.000366058 6.46289e-05" />
+                    <joint name="LF3" class="LF_foot" range="-0.3 0.6" pos="0 0 0" axis="0 0 1" />
+                    <geom class="LF_foot"/>
+                    <geom class="collision" type = "sphere" pos="0.145 -0.145 -0.065" size = "0.025" />
+                    <geom class="collision" type = "mesh" mesh = "Foot_Hitbox" pos="-0.005 0.005 -0.065" euler="0 0 0.7900" />
+                    <geom class="collision" type = "cylinder" pos="0.0 -0.00 -0.065" size = " 0.023 0.008" />
+                </body>
+            </body>
+        </body>
+        <!-- RF -->
+        <body name="RF_waist" pos="0.44 0.0613268 0.103559" quat="6.14843e-09 0 0.000144707 1">
+            <inertial pos="-0.042748 1.12578e-06 0.000690617" quat="0.50242 0.504062 -0.495869 0.497604" mass="0.434303" diaginertia="0.000202976 0.000135183 0.000102482" />
+            <joint name="RF1" class="RF_waist" range="-0.3 0.3" pos="0 0 0" axis="1 0 0" />
+            <geom class="RF_waist"/>
+            <geom class="collision" type="cylinder"  pos = "-0.05 0 -0.005"  size = " 0.048 0.018" />
+
+            <body name="RF_thigh" pos="-0.052 0 0" quat="6.14843e-09 0 0 -1">
+                <inertial pos="-0.00730784 -0.00707873 0.0572357" quat="0.669593 0.264533 -0.635771 0.27832" mass="0.714757" diaginertia="0.000560777 0.00037662 0.000258448"  />
+                <joint name="RF2" class="RF_thigh" pos="0 0 0" axis="0 0 1" />
+                <geom class="RF_thigh"/>
+                <geom class="collision" type="cylinder"  pos = "-0.00075 0.0005 0.0460"  size = " 0.048 0.0145" />
+                <geom class="collision" type="cylinder"  pos = "-0.00075 0.0005 0.0710"  size = " 0.030 0.0145" />
+
+                <body name="RF_foot" pos="-0.149573 -0.149533 0.0509376" quat="0.999974 0 0 0.00721738">
+                    <inertial pos="0.0711173 -0.0710194 0.0248945" quat="0.270642 0.653265 -0.27064 0.653262" mass="0.31588" diaginertia="0.000379995 0.000366058 6.46289e-05" />
+                    <joint name="RF3" class="RF_foot" range="-0.3 0.6" pos="0 0 0" axis="0 0 1" />
+                    <geom class="RF_foot"/>
+                    <geom class="collision" type = "sphere" pos="0.145 -0.145 0.025" size = "0.025" />
+                    <geom class="collision" type = "mesh" mesh = "Foot_Hitbox" pos="-0.005 0.005 0.025" euler="0 0 0.7900" />
+                    <geom class="collision" type = "cylinder" pos="0.0 -0.00 0.025" size = " 0.023 0.008" />
+
+                </body>
+            </body>
+        </body>
+
+        <!-- LB -->
+
+        <body name="LB_waist" pos="0.0510039 0.0613268 0.00355933">
+            <inertial pos="0.0582481 -1.12649e-06 -0.00069062" quat="0.497604 0.495869 -0.504062 0.50242" mass="0.434303" diaginertia="0.000202976 0.000135183 0.000102482" />
+            <joint name="LB1" class="LB_waist" range="-0.3 0.3" pos="0 0 0" axis="1 0 0" />
+            <geom class="LB_waist"/>
+            <geom class="collision" type="cylinder"  pos = "0.05 0 0.005"  size = " 0.048 0.018" />
+
+            <body name="LB_thigh" pos="0.048996 0 -0.011256">
+                <inertial pos="-0.0070779 -0.0073077 -0.04598" quat="-0.276683 0.636603 0.26252 0.670273" mass="0.71476" diaginertia="0.000560776 0.000376622 0.000258452" />
+                <joint name="LB2" class="LB_thigh" pos="0 0 0" axis="0 0 1" />
+                <geom class="LB_thigh"/>
+                <geom class="collision" type="cylinder"  pos = "-0.00075 0.0005 -0.0355"  size = " 0.048 0.0145" />
+                <geom class="collision" type="cylinder"  pos = "-0.00075 0.0005 -0.0605"  size = " 0.030 0.0145" />
+
+                <body name="LB_foot" pos="-0.14953 -0.14957 0" quat="0.999984 0 0 0.00559297">
+                    <inertial pos="0.071135 -0.071002 -0.064577" quat="0.270555 0.653299 -0.270555 0.653299" mass="0.31588" diaginertia="0.00037999 0.00036605 6.463e-05"  />
+                    <joint name="LB3" class="LB_foot" range="-0.3 0.6" pos="0 0 0" axis="0 0 1" />
+                    <geom class="LB_foot"/>
+                    <geom class="collision" type = "sphere" pos="0.145 -0.145 -0.065" size = "0.025" />
+                    <geom class="collision" type = "mesh" mesh = "Foot_Hitbox" pos="-0.005 0.005 -0.065" euler="0 0 0.7900" />
+                    <geom class="collision" type = "cylinder" pos="0.0 -0.00 -0.065" size = " 0.023 0.008" />
+
+                </body>
+            </body>
+        </body>
+
+        <!-- RB -->
+        <body name="RB_waist" pos="0.0510039 0.0613268 0.103559">
+            <inertial pos="0.0582481 1.12506e-06 0.000690598" quat="0.50242 0.504062 -0.495869 0.497604" mass="0.434303" diaginertia="0.000202976 0.000135183 0.000102482" />
+            <joint name="RB1" class="RB_waist" range="-0.3 0.3" pos="0 0 0" axis="1 0 0" />
+            <geom class="RB_waist"/>
+            <geom class="collision" type="cylinder"  pos = "0.05 0 -0.005"  size = " 0.048 0.018" />
+
+            <body name="RB_thigh" pos="0.05 0 0">
+                <inertial pos="-0.00831173 -0.00707868 0.0572357" quat="0.669593 0.264533 -0.635771 0.27832" mass="0.714757" diaginertia="0.000560777 0.00037662 0.000258448"  />
+                <joint name="RB2" class="RB_thigh"  pos="0 0 0" axis="0 0 1" />
+                <geom class="RB_thigh"/>
+                <geom class="collision" type="cylinder"  pos = "-0.00075 0.0005 0.0460"  size = " 0.048 0.0145" />
+                <geom class="collision" type="cylinder"  pos = "-0.00075 0.0005 0.0710"  size = " 0.030 0.0145" />
+
+                <body name="RB_foot" pos="-0.150577 -0.149533 0.051" quat="0.999984 0 0 0.00568627">
+                    <inertial pos="0.0711172 -0.0710194 0.0248324" quat="0.270641 0.653264 -0.270641 0.653264" mass="0.31588" diaginertia="0.000379995 0.000366058 6.46289e-05"  />
+                    <joint name="RB3" class="RB_foot" range="-0.3 0.6" pos="0 0 0" axis="0 0 1" />
+                    <geom class="RB_foot"/>
+                    <geom class="collision" type = "sphere" pos="0.145 -0.145 0.025" size = "0.025" />
+                    <geom class="collision" type = "mesh" mesh = "Foot_Hitbox" pos="-0.005 0.005 0.025" euler="0 0 0.7900" />
+                    <geom class="collision" type = "cylinder" pos="0.0 -0.00 0.025" size = " 0.023 0.008" />
+
+                </body>
+            </body>
+        </body>
+    </body>
+</mujocoinclude>

@@ -1,0 +1,104 @@
+<mujocoinclude>
+    <compiler angle="radian"/>
+    <option timestep="0.002"/>
+
+    <size njmax="-1" nconmax="-1"/>
+    <default>
+        <default class="minicheetah">
+            <joint limited="true" range="-0.5 0.5" damping="0.7" armature="0.001"/>
+            <geom contype="1" conaffinity="1" condim="4" group="1" margin="0.001" solref=".02 1" solimp =".8 .9 .01" />
+            <motor ctrllimited="true" ctrlrange="-1.5 1.5"  forcelimited="false" forcerange="-0.5 0.5"/>
+            <!-- belly-->
+            <default class="belly">
+                <geom contype="0" conaffinity="0" group="1" type="mesh" rgba="1 1 1 1" mass="0"/>
+            </default>
+            <!-- waist-->
+            <default class="LF_waist">
+                <geom mesh="LF_Waist" contype="0" conaffinity="0" group="1" type="mesh" rgba="0.3 0.3 1 1" mass="0"/>
+            </default>
+            <default class="LB_waist">
+                <geom mesh="LB_Waist" contype="0" conaffinity="0" group="1" type="mesh" rgba="0.3 0.3 1 1" mass="0"/>
+            </default>
+            <default class="RF_waist">
+                <geom mesh="RF_Waist" contype="0" conaffinity="0" group="1" type="mesh" rgba="0.3 0.3 1 1" mass="0"/>
+            </default>
+            <default class="RB_waist">
+                <geom mesh="RB_Waist" contype="0" conaffinity="0" group="1" type="mesh" rgba="0.3 0.3 1 1" mass="0"/>
+            </default>
+            <!-- thigh-->
+            <default class="LF_thigh">
+                <geom mesh="LF_Thigh" contype="0" conaffinity="0" group="1" type="mesh" rgba="0.3 1 0.3 1" mass="0"/>
+            </default>
+            <default class="LB_thigh">
+                <geom mesh="LB_Thigh" contype="0" conaffinity="0" group="1" type="mesh" rgba="0.3 1 0.3 1" mass="0"/>
+            </default>
+            <default class="RF_thigh">
+                <geom mesh="RF_Thigh" contype="0" conaffinity="0" group="1" type="mesh" rgba="0.3 1 0.3 1" mass="0"/>
+            </default>
+            <default class="RB_thigh">
+                <geom mesh="RB_Thigh" contype="0" conaffinity="0" group="1" type="mesh" rgba="0.3 1 0.3 1" mass="0"/>
+            </default>
+            <!-- foot-->
+            <default class="LF_foot">
+                <geom mesh="LF_Foot" contype="0" conaffinity="0" group="1" type="mesh" rgba="1 0.3 0.3 1" mass="0"/>
+            </default>
+            <default class="LB_foot">
+                <geom mesh="LB_Foot" contype="0" conaffinity="0" group="1" type="mesh" rgba="1 0.3 0.3 1" mass="0"/>
+            </default>
+            <default class="RF_foot">
+                <geom mesh="RF_Foot" contype="0" conaffinity="0" group="1" type="mesh" rgba="1 0.3 0.3 1" mass="0"/>
+            </default>
+            <default class="RB_foot">
+                <geom mesh="RB_Foot" contype="0" conaffinity="0" group="1" type="mesh" rgba="1 0.3 0.3 1" mass="0"/>
+            </default>
+            <!-- collision-->
+            <default class="collision">
+                <geom contype="1" conaffinity="1" group="4" rgba="1 0.3 1 0.5"/>
+            </default>
+            <!-- site-->
+            <site pos="0.049 0 0" group="1" type="sphere" size="0.006"/>
+        </default>
+    </default>
+    <asset>
+        <mesh name="Bulk" file="torso.STL"/>
+        <mesh name="BulkCollision" file="torso.STL"/>
+        <!-- waist-->
+        <mesh name="LF_Waist" file="LF_waist.STL"/>
+        <mesh name="LB_Waist" file="LB_waist.STL"/>
+        <mesh name="RF_Waist" file="RF_waist.STL"/>
+        <mesh name="RB_Waist" file="RB_waist.STL"/>
+        <!-- thigh-->
+        <mesh name="LF_Thigh" file="LF_thigh.STL"/>
+        <mesh name="LB_Thigh" file="LB_thigh.STL"/>
+        <mesh name="RF_Thigh" file="RF_thigh.STL"/>
+        <mesh name="RB_Thigh" file="RB_thigh.STL"/>
+        <!-- foot-->
+        <mesh name="LF_Foot" file="LF_foot.STL"/>
+        <mesh name="LB_Foot" file="LB_foot.STL"/>
+        <mesh name="RF_Foot" file="RF_foot.STL"/>
+        <mesh name="RB_Foot" file="RB_foot.STL"/>
+        <!-- hitbox-->
+        <mesh name="Thigh_Hitbox" file="thigh_hitbox.STL"/>
+        <mesh name="Foot_Hitbox" file="foot_hitbox.STL"/>    
+
+    </asset>
+    <actuator>
+        <motor class="LF_waist" name="LF1" joint="LF1" gear = "7"/>
+        <motor class="LF_thigh" name="LF2" joint="LF2" gear = "8"/>
+        <motor class="LF_foot" name="LF3" joint="LF3" gear = "8"/>
+        <motor class="RF_waist" name="RF1" joint="RF1" gear = "7"/>
+        <motor class="RF_thigh" name="RF2" joint="RF2" gear = "8"/>
+        <motor class="RF_foot" name="RF3" joint="RF3" gear = "8"/>
+        <motor class="LB_waist" name="LB1" joint="LB1" gear = "7"/>
+        <motor class="LB_thigh" name="LB2" joint="LB2" gear = "8"/>
+        <motor class="LB_foot" name="LB3" joint="LB3" gear = "8"/>
+        <motor class="RB_waist" name="RB1" joint="RB1" gear = "7"/>
+        <motor class="RB_thigh" name="RB2" joint="RB2" gear = "8"/>
+        <motor class="RB_foot" name="RB3" joint="RB3" gear = "8"/>
+    </actuator>
+</mujocoinclude>
+
+
+
+
+

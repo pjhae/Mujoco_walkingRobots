@@ -1,0 +1,55 @@
+<mujocoinclude>
+    <compiler angle="radian"/>
+    <option timestep="0.002"/>
+    <size njmax="-1" nconmax="-1"/>
+    <default>
+        <default class="hexy">
+            <joint limited="true" range="-1.5 1.5" damping="0.1" armature="0.001"/>
+            <geom contype="1" conaffinity="1" condim="4" group="1" margin="0.001"/>
+            <position ctrllimited="true" ctrlrange="-1.5 1.5" forcelimited="true" forcerange="-0.5 0.5" kp="1" gear="1"/>
+            <default class="belly">
+                <geom contype="0" conaffinity="0" group="1" type="mesh" rgba="1 1 1 1" mass="0"/>
+            </default>
+            <default class="thigh">
+                <geom mesh="Thigh" contype="0" conaffinity="0" group="1" type="mesh" rgba="0.3 0.3 1 1" mass="0"/>
+            </default>
+            <default class="shin">
+                <geom mesh="Shin" contype="0" conaffinity="0" group="1" type="mesh" rgba="0.3 1 0.3 1" mass="0"/>
+            </default>
+            <default class="foot">
+                <geom mesh="Foot" contype="0" conaffinity="0" group="1" type="mesh" rgba="1 0.3 0.3 1" mass="0"/>
+            </default>
+            <default class="collision">
+                <geom contype="1" conaffinity="1" group="4" rgba="1 0.3 1 0.5"/>
+            </default>
+            <site pos="0.049 0 0" group="1" type="sphere" size="0.006"/>
+        </default>
+    </default>
+    <asset>
+        <mesh name="Bulk" file="main_body.STL"/>
+        <mesh name="BulkCollision" file="base_link_2500_face.stl"/>
+        <mesh name="Thigh" file="link1_1.STL"/>
+        <mesh name="Shin" file="link1_2.STL"/>
+        <mesh name="Foot" file="link1_3.STL"/>
+    </asset>
+    <actuator>
+        <position class="hexy" name="FR1" joint="FR1"/>
+        <position class="shin" name="FR2" joint="FR2"/>
+        <position class="foot" name="FR3" joint="FR3"/>
+        <position class="hexy" name="MR1" joint="MR1"/>
+        <position class="shin" name="MR2" joint="MR2"/>
+        <position class="foot" name="MR3" joint="MR3"/>
+        <position class="hexy" name="BR1" joint="BR1"/>
+        <position class="shin" name="BR2" joint="BR2"/>
+        <position class="foot" name="BR3" joint="BR3"/>
+        <position class="hexy" name="FL1" joint="FL1"/>
+        <position class="shin" name="FL2" joint="FL2"/>
+        <position class="foot" name="FL3" joint="FL3"/>
+        <position class="hexy" name="ML1" joint="ML1"/>
+        <position class="shin" name="ML2" joint="ML2"/>
+        <position class="foot" name="ML3" joint="ML3"/>
+        <position class="hexy" name="BL1" joint="BL1"/>
+        <position class="shin" name="BL2" joint="BL2"/>
+        <position class="foot" name="BL3" joint="BL3"/>
+    </actuator>
+</mujocoinclude>
