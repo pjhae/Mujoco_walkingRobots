@@ -13,7 +13,7 @@ https://grabcad.com/library
 ### 1. MiniCheetah
 
 #### 1.1. [Solidworks] re-assembly process :
-**Video : [Link](https://youtu.be/irAciVODtpI)**
+
 
 
 #### 1.2. [URDF] Hitbox design :
